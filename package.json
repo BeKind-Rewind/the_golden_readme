@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/BeKind-Rewind/the_golden_readme#readme",
   "dependencies": {
-    "inquirer": "^9.0.2"
+    "inquirer": "^6.3.1"
   }
 }

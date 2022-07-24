@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
-const generateMarkdown = require('./develop/utils/generateMarkdown.js')
+const markDown = require('./develop/utils/generateMarkdown.js')
 
 
 
@@ -21,7 +21,7 @@ const questions = [
         {
             name: 'email',
             type: 'input',
-            message: 'What the email where you would like to be contacted?'
+            message: 'What is the email where you would like to be contacted?'
         },
         {
             name: 'title',
@@ -69,9 +69,15 @@ const questions = [
 // TODO: Create a function to initialize app
 function initQ() {
     return inquirer.prompt(questions) 
-        .then((answers) => {
-            console.log(answers)
-            return answers
+        .then((data) => {
+            const sheet = markDown.generateMarkdown(data)
+            fs.writeFile('README.md', sheet, function(err) {
+                if(err){
+                    console.log("Could not save")
+                } else {
+                    console.log("Success: new README file generated inside current folder.")
+                }
+            })
         })
         .catch((error) => {
             console.log(error)

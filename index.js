@@ -4,7 +4,7 @@ const inquirer = require('inquirer');
 
 
 // Connecting to template that incorporates user input with desired output, used to write new file
-const markDown = require('./develop/utils/generateMarkdown.js')
+const generateMarkdown = require('./develop/utils/generateMarkdown.js')
 
 
 
@@ -59,30 +59,33 @@ const questions = [
             name: 'license',
             type: 'list',
             message: 'License?',
-            choices: ["MIT", "GPL", "GNU"],
+            choices: ["MIT", "GPL", "GNU", "None"],
             
         }
 
     ];
 
 
+function writeToFile (fileName, data){
+    fs.writeFile(fileName, data, function(err) {
+        if(err){
+            console.log("Could not save")
+        } else {
+            console.log("Success: new README file generated inside current folder.")
+        }
+    })
+}
+
 
 // Function to initialize app
-function initQ() {
+function init() {
     // returns the user input from the questions prompts
     return inquirer.prompt(questions) 
-        // then it takes that returned data, runs it through function (to use it) with the markdown template information 
-        // in order to compile all the information dynamically into the desired output (which sets us up to be able to write to file)
+       
         .then((data) => {
-            const sheet = markDown.generateMarkdown(data)
+            const sheet = generateMarkdown(data)
             // write to (new) README.md file
-            fs.writeFile('README.md', sheet, function(err) {
-                if(err){
-                    console.log("Could not save")
-                } else {
-                    console.log("Success: new README file generated inside current folder.")
-                }
-            })
+            writeToFile('README.md', sheet)
         })
         .catch((error) => {
             console.log(error)
@@ -93,4 +96,4 @@ function initQ() {
 
 
 // Function call to initialize app
-initQ();
+init();

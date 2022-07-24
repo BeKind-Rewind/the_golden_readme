@@ -1,12 +1,14 @@
-// TODO: Include packages needed for this application
+// Package declarations needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
+
+
+// Connecting to template that incorporates user input with desired output, used to write new file
 const markDown = require('./develop/utils/generateMarkdown.js')
 
 
 
-
-// TODO: Create an array of questions for user input
+// Array of questions for user input
 const questions = [
         {
             name: 'name',
@@ -63,14 +65,17 @@ const questions = [
 
     ];
 
-// // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
 
-// TODO: Create a function to initialize app
+
+// Function to initialize app
 function initQ() {
+    // returns the user input from the questions prompts
     return inquirer.prompt(questions) 
+        // then it takes that returned data, runs it through function (to use it) with the markdown template information 
+        // in order to compile all the information dynamically into the desired output (which sets us up to be able to write to file)
         .then((data) => {
             const sheet = markDown.generateMarkdown(data)
+            // write to (new) README.md file
             fs.writeFile('README.md', sheet, function(err) {
                 if(err){
                     console.log("Could not save")
@@ -83,5 +88,9 @@ function initQ() {
             console.log(error)
         })
 }
+
+
+
+
 // Function call to initialize app
 initQ();

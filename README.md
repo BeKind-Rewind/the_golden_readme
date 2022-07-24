@@ -1,5 +1,8 @@
 
-# Pickles for the World
+# Pickles for all
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ## Table of Contents
   - [Project description](#Description)
   - [Usage](#Usage)
@@ -9,23 +12,22 @@
   - [License](#License)
 
 ## Description
-Everyone gets pickles
+pickles for all
 
 ## Usage
-When I hit send, a missile is launches with the dill goodness into the stratusphere and explosed within the atmosphere over your favorite city of choice
+yep
 
 ## Contributing
-Storm, 13, Clegane, my parents, the Letter P
+all
 
 ## Installation
-click install
+download
 
 ## Questions
-Challenge641@gmail.com
 BeKind-Rewind
 
+challenge641@gmail.com
+
 ## License
-MIT
-
-
+Licensed under the [License: MIT](https://choosealicense.com/licenses/mit/) license.
     

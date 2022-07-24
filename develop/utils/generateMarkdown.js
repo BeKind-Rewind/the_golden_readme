@@ -45,7 +45,7 @@ class markDown {
 
       ## Questions
       ${data.email}
-      ${data.github}
+      ${data.git}
 
       ## License
       ${data.license}

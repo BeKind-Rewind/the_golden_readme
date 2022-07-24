@@ -4,41 +4,25 @@ const inquirer = require('inquirer');
 const generateMarkdown = require('./develop/utils/generateMarkdown.js')
 
 
-const mainQuestions = readmeData => {
-    if (!readmeData) {
-        readmeData = [];
-      }
-    return inquirer.prompt([
-      {
-        name: 'name',
-        type: 'input',
-        message: 'What is your name?'
-      },
-      {
-        name: 'github',
-        type: 'input',
-        message: 'What is your GitHub username?'
-      },
-      {
-        name: 'email',
-        type: 'input',
-        message: 'What the email where you would like to be contacted?'
-      }
-    ])
-    // .then(data => {
-    //     readmeData[i].push(data);
-    //     if (data.confirmAddProject) {
-    //       return promptProject(readmeData);
-    //     } else {
-    //       return data;
-    //     }
-    // });
-};
 
 
 // TODO: Create an array of questions for user input
-const questions = () => {
-    return inquirer.prompt([
+const questions = [
+        {
+            name: 'name',
+            type: 'input',
+            message: 'What is your name?'
+        },
+        {
+            name: 'github',
+            type: 'input',
+            message: 'What is your GitHub username?'
+        },
+        {
+            name: 'email',
+            type: 'input',
+            message: 'What the email where you would like to be contacted?'
+        },
         {
             name: 'title',
             type: 'input',
@@ -70,32 +54,19 @@ const questions = () => {
             
         },
         {
-            name: 'questions',
-            type: 'input',
-            message: 'Questions? Contact me here:',
-            
-        },
-        {
             name: 'license',
             type: 'list',
             message: 'License?',
             choices: ["MIT", "GPL", "GNU"],
-            filter(val){
-                return val.toLowerCase();
-            }
             
         }
 
-    ])
-    
-    
-};
+    ];
 
 // // TODO: Create a function to write README file
 // function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-
 function initQ() {
     return inquirer.prompt(questions) 
         .then((answers) => {

@@ -1,9 +1,10 @@
+// Renders the link to the license of choice
 function renderLicenseBadge(license) {
   if(license != "None"){
     const badges = {
-      MIT: "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
-      MPL: "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)",
-      GNU: "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
+      MIT: "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://choosealicense.com/licenses/mit/)",
+      MPL: "[![License: MPL](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://choosealicense.com/licenses/mpl-2.0/)",
+      GNU: "[![License: GPL](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://choosealicense.com/licenses/gpl-3.0/)"
     }    
     return badges[license]   
   } else {
@@ -11,13 +12,13 @@ function renderLicenseBadge(license) {
   }
 };
 
-// rendering the license link
+// Renders the link to the license of choice
 function renderLicenseLink(license) {
     if(license != 'None'){
     const licenseLinks = {
       MIT: "[MIT](https://choosealicense.com/licenses/mit/)",
-      MPL: "[MPL 2.0](https://choosealicense.com/licenses/mpl-2.0/)",
-      GNU: "[GNU GPL v3](https://choosealicense.com/licenses/gpl-3.0/)"
+      MPL: "[MPL](https://choosealicense.com/licenses/mpl-2.0/)",
+      GNU: "[GNU](https://choosealicense.com/licenses/gpl-3.0/)"
     }
     return licenseLinks[license]
   } else {
@@ -29,7 +30,7 @@ function renderLicenseLink(license) {
 function renderTableLink(license) {
     if(license != 'None'){
       return `
-  - [License](#License)
+  - [License](#license)
       `
     } else {
       return '';
@@ -37,12 +38,12 @@ function renderTableLink(license) {
 };
 
 
-  // TODO If there is no license, return an empty string
-  //rendering the license link section
+
+
+// Renders the license chosen into a section in the README, or if 'None' leaves it out
 function renderLicenseSection(license){
     if(license != 'None'){
-      return `
-## License
+      return `## License
 
 Licensed under the ${renderLicenseLink(license)} license.`
     } else {
@@ -50,31 +51,44 @@ Licensed under the ${renderLicenseLink(license)} license.`
     }
 };
 
+
+// Generates the main body of the markdown sheet
 function generateMarkdown(data) {
-    return `
-# ${data.title}
+    return `# ${data.title}
 
 ${renderLicenseBadge(data.license)}
-
-## Table of Contents
-  - [Project description](#Description)
-  - [Usage](#Usage)
-  - [Contributing](#Contributing)
-  - [Installation](#Installation)
-  - [Questions](#Questions)
-${renderTableLink(data.license)}
 
 ## Description
 ${data.description}
 
+## Table of Contents
+  - [Usage](#usage)
+  - [Tests](#tests)
+  - [Installation](#installation)
+  - [Contributing](#contributing)
+  - [Questions](#questions)
+${renderTableLink(data.license)}
+
+
 ## Usage
 ${data.usage}
+
+
+
+## Tests
+${data.tests}
+
+
+
+## Installation
+${data.installation}
+
+
 
 ## Contributing
 ${data.contributing}
 
-## Installation
-${data.installation}
+
 
 ## Questions
 

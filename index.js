@@ -44,9 +44,9 @@ const questions = [
             
         },
         {
-            name: 'contributing',
+            name: 'tests',
             type: 'input',
-            message: 'Contributors:',
+            message: 'Testing information to include:',
             
         },
         {
@@ -56,10 +56,16 @@ const questions = [
             
         },
         {
+            name: 'contributing',
+            type: 'input',
+            message: 'Contributing:',
+            
+        },
+        {
             name: 'license',
             type: 'list',
             message: 'License?',
-            choices: ["MIT", "GPL", "GNU", "None"],
+            choices: ["MIT", "MPL", "GNU", "None"],
             
         }
 

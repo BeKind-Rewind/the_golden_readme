@@ -77,7 +77,7 @@ function writeToFile (fileName, data){
         if(err){
             console.log("Could not save")
         } else {
-            console.log("Success: new README file generated inside current folder.")
+            console.log("Success: new README file generated inside sample folder.")
         }
     })
 }
@@ -91,7 +91,7 @@ function init() {
         .then((data) => {
             const sheet = generateMarkdown(data)
             // write to (new) README.md file
-            writeToFile('README.md', sheet)
+            writeToFile('./sample/README.md', sheet)
         })
         .catch((error) => {
             console.log(error)

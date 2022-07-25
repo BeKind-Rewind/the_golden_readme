@@ -12,7 +12,9 @@ The Golden README is a README.md generator to facilitate a more efficient use of
 
 
 ## Usage
-The Golden README is a README.md generator that prompts the user to answer pertinent topics and populates appropriate sections of the readme.
+The Golden README is a README.md generator that prompts the user to answer pertinent topics and populates appropriate sections of the readme. The newly generated readme will write to the README.md file located in the sample folder.
+
+Users initiate the app from the terminal of the repository's root directory with command "node index". User will the be prompted to answer questions which will be used to dynamically create or rewrite the README.md file in the sample folder. 
 
 ## Screeenshot
 ![alt text](images/screenshot.png)
@@ -25,7 +27,16 @@ none
 
 
 ## Installation
-Requires Node.js https://nodejs.org. Then (MAC) npm install <package> (WINDOWS) C:\>npm install <package>. Finally npm init. Be sure to have the correct Inquirer dependencies: https://nodejs.com/package/inquirer.
+Requires downloading Node.js, found here: https://nodejs.org. 
+  Inquirer: https://nodejs.com/package/inquirer.
+
+Then 
+  (MAC) npm install <package> 
+  (WINDOWS) C:\>npm install <package>
+
+Finally, run npm init from the root directory of the repository. 
+
+
 
 
 ## Contributing

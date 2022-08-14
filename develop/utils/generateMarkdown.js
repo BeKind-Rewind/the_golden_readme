@@ -65,6 +65,7 @@ ${data.description}
   - [Usage](#usage)
   - [Tests](#tests)
   - [Installation](#installation)
+  - [Screenshots and Video](#screenshots_video)
   - [Contributing](#contributing)
   - [Questions](#questions)
 ${renderTableLink(data.license)}
@@ -82,6 +83,11 @@ ${data.tests}
 
 ## Installation
 ${data.installation}
+
+
+## Screenshots and Video
+${data.screenshots_video}
+![Alt Text](./images/screenshot.png)
 
 
 

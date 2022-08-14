@@ -1,14 +1,15 @@
-# Puppies for Everyone
+# Subsequent Employee Tracker
 
-[![License: MPL](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://choosealicense.com/licenses/mpl-2.0/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://choosealicense.com/licenses/mit/)
 
 ## Description
-There is a great demand for puppies and shelters are overflowing with puppies. This app was created to connect potential puppy-parents to adoptable puppies (and of course, doggos!)
+
 
 ## Table of Contents
   - [Usage](#usage)
   - [Tests](#tests)
   - [Installation](#installation)
+  - [Screenshots and Video](#screenshots_video)
   - [Contributing](#contributing)
   - [Questions](#questions)
 
@@ -17,22 +18,25 @@ There is a great demand for puppies and shelters are overflowing with puppies. T
 
 
 ## Usage
-Download the app, enter name, contact, and some biographical data to begin the search. Use the filters to find the best fit and location of the animal. Add favorite search results to a favorites folder to come back to later. Biographical, medical, and contact information is displayed when clicking on any puppy listed. Users can indicate interest, initiate real-time chat-message, and send email through the app. 
+
 
 
 
 ## Tests
-none
+
 
 
 
 ## Installation
-download from github
 
+
+
+## Screenshots and Video
+Yep
 
 
 ## Contributing
-Contributions welcommed. More information to come.
+
 
 
 
@@ -43,10 +47,10 @@ You can find me on GitHub:
 https://github.com/BeKind-Rewind
 
 Or email me at:
-puppytails@gmail.com
+Challange641@gmail.com
 
 
 ## License
 
-Licensed under the [MPL](https://choosealicense.com/licenses/mpl-2.0/) license.
+Licensed under the [MIT](https://choosealicense.com/licenses/mit/) license.
     

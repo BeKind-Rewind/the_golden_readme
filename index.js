@@ -56,6 +56,12 @@ const questions = [
             
         },
         {
+            name: 'screenshots_video',
+            type: 'input',
+            message: 'Screenshots and Video:',
+            
+        },
+        {
             name: 'contributing',
             type: 'input',
             message: 'Contributing:',
